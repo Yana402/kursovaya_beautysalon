@@ -14,7 +14,7 @@
     <artifactId>backend</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>backend</name>
-    <description>Backend part of fast food restaurant</description>
+    <description>Backend part of beauty salon app</description>
 
     <properties>
         <java.version>21</java.version>

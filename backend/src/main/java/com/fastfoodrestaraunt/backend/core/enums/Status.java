@@ -7,5 +7,7 @@ public enum Status {
 
     PROCESSING,
 
+    COMPLETED,
+
     CANCELLED
 }

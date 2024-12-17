@@ -1,6 +1,6 @@
 spring:
   application:
-    name: fast-food-restaurant-backend
+    name: beauty-salon-app
   datasource:
     url: jdbc:postgresql://${DB_HOST:localhost}:${DB_PORT:5432}/${DB_NAME:beauty_salon_database}
     username: ${DB_USERNAME:postgres}
@@ -16,11 +16,11 @@ spring:
   mail:
     host: smtp.mailersend.net
     port: 587
-    username: MS_D5g4ou@trial-7dnvo4dx8nng5r86.mlsender.net
-    password: Xuz0osLyjRnwlEfN
+    username: MS_Vi9JUc@trial-0p7kx4xy9xel9yjr.mlsender.net
+    password: mmT7k8zw0XGXNSZm
     protocol: smtp
-    sender-email: MS_D5g4ou@trial-7dnvo4dx8nng5r86.mlsender.net
-    sender-name: FastFoodRestaurant
+    sender-email: MS_Vi9JUc@trial-0p7kx4xy9xel9yjr.mlsender.net
+    sender-name: BeautySalon
     properties:
       mail:
         smtp:
