@@ -1,0 +1,39 @@
+services:
+  postgres:
+    build: database
+    image: beauty-salon-database:1.0.0
+    ports:
+      - "5433:5432"
+
+  backend:
+    build: backend
+    image: beauty-salon-backend:1.0.0
+    environment:
+      - DB_HOST=postgres
+      - DB_PORT=5432
+      - DB_NAME=beauty_salon_database
+      - DB_USERNAME=postgres
+      - DB_PASSWORD=root
+      - JWT_SECRET=8Zz5tw0Ionm3XPZZfN0NOml3z9FMfmpgXwovR9fp6ryDIoGRM8EPHAB6iHsc0fb1111
+      - JWT_ALGORITHM=HS512
+      - JWT_ACCESS_EXPIRATION=10
+      - JWT_REFRESH_EXPIRATION=60
+      - MAIL_HOST=smtp.mailersend.net
+      - MAIL_PORT=587
+      - MAIL_USERNAME=MS_Vi9JUc@trial-0p7kx4xy9xel9yjr.mlsender.net
+      - MAIL_PASSWORD=mmT7k8zw0XGXNSZm
+      - MAIL_SENDER_EMAIL=MS_Vi9JUc@trial-0p7kx4xy9xel9yjr.mlsender.net
+      - MAIL_SENDER_NAME=BeautySalon
+      - SERVER_PORT=8080
+    depends_on:
+      - postgres
+    ports:
+      - "8080:8080"
+
+  frontend:
+    build: frontend
+    image: beauty-salon-restaurant-frontend:1.0.0
+    depends_on:
+      - backend
+    ports:
+      - "3000:3000"
