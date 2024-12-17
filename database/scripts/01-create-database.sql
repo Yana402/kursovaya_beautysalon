@@ -1,0 +1,1 @@
+CREATE DATABASE beauty_salon_database;
